@@ -1,0 +1,27 @@
+---
+service:
+  orgIdentifier: "default"
+  projectIdentifier: "default_project"
+  serviceDefinition:
+    spec:
+      manifests:
+      - manifest:
+          identifier: "deployment"
+          type: "K8sManifest"
+          spec:
+            store:
+              type: "Github"
+              spec:
+                connectorRef: "account.account_github_connector"
+                gitFetchType: "Branch"
+                paths:
+                - "k8s_manifests/deployment.yaml"
+                - "k8s_manifests/svc.yaml"
+                repoName: "python-webapp-harness-pipeline"
+                branch: "main"
+            skipResourceVersioning: false
+            enableDeclarativeRollback: false
+    type: "Kubernetes"
+  identifier: "python_jokes_service_with_artifact"
+  tags: {}
+  name: "python_jokes_service_with_artifact"
