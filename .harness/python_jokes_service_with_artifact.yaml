@@ -18,6 +18,8 @@ service:
                     - k8s_manifests/svc.yaml
                   repoName: python-webapp-harness-pipeline
                   branch: main
+              valuesPaths:
+                - values.yaml
               skipResourceVersioning: false
               enableDeclarativeRollback: false
       artifacts:
