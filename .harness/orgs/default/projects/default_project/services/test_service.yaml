@@ -30,7 +30,7 @@ service:
           sources:
             - spec:
                 connectorRef: dockerhub_connector
-                imagePath: library/victorialloyd/python-webapp
+                imagePath: victorialloyd/python-webapp
                 tag: <+input>
                 digest: ""
               identifier: my_jokes_app
