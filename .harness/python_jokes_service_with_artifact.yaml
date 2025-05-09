@@ -27,7 +27,7 @@ service:
           primaryArtifactRef: <+input>
           sources:
             - spec:
-                connectorRef: dockerhubpat
+                connectorRef: account.harnessImage
                 imagePath: library/victorialloyd/python-webapp
                 tag: "1"
                 digest: ""
