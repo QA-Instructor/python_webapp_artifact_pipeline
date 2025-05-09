@@ -28,8 +28,8 @@ service:
           sources:
             - spec:
                 connectorRef: account.harnessImage
-                imagePath: victorialloyd/python-webapp
-                tag: 1
+                imagePath: library/victorialloyd/python-webapp
+                tag: "1"
                 digest: ""
               identifier: python_jokes_webapp
               type: DockerRegistry
