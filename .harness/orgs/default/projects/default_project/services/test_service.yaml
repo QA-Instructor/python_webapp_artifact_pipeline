@@ -24,4 +24,15 @@ service:
                 - k8s_manifests/values.yaml
               skipResourceVersioning: false
               enableDeclarativeRollback: false
+      artifacts:
+        primary:
+          primaryArtifactRef: <+input>
+          sources:
+            - spec:
+                connectorRef: dockerhub_connector
+                imagePath: library/victorialloyd/python-webapp
+                tag: <+input>
+                digest: ""
+              identifier: my_jokes_app
+              type: DockerRegistry
     type: Kubernetes
