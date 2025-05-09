@@ -14,6 +14,14 @@ pipeline:
           deploymentType: Kubernetes
           service:
             serviceRef: test_service
+            serviceInputs:
+              serviceDefinition:
+                type: Kubernetes
+                spec:
+                  artifacts:
+                    primary:
+                      primaryArtifactRef: <+input>
+                      sources: <+input>
           environment:
             environmentRef: harnessdevenv
             deployToAll: false
