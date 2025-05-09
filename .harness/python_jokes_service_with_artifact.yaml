@@ -29,7 +29,7 @@ service:
             - spec:
                 connectorRef: account.harnessImage
                 imagePath: victorialloyd/python-webapp
-                tag: <+trigger.artifact.build>
+                tag: 1
                 digest: ""
               identifier: python_jokes_webapp
               type: DockerRegistry
