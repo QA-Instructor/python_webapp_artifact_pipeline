@@ -28,17 +28,10 @@ service:
           sources:
             - spec:
                 connectorRef: account.harnessImage
-                imagePath: library/victorialloyd/python-webapp
+                imagePath: victorialloyd/python-webapp
                 tag: "1"
                 digest: ""
               identifier: python_jokes_webapp
-              type: DockerRegistry
-            - spec:
-                connectorRef: account.harnessImage
-                imagePath: library/nginx
-                tag: <+input>
-                digest: ""
-              identifier: artifact2
               type: DockerRegistry
     type: Kubernetes
   identifier: python_jokes_service_with_artifact
