@@ -3,3 +3,25 @@ service:
   identifier: test_service
   orgIdentifier: default
   projectIdentifier: default_project
+  serviceDefinition:
+    spec:
+      manifests:
+        - manifest:
+            identifier: deploy_manifest
+            type: K8sManifest
+            spec:
+              store:
+                type: Github
+                spec:
+                  connectorRef: account.account_github_connector
+                  gitFetchType: Branch
+                  paths:
+                    - k8s_manifests/deployment.yaml
+                    - k8s_manifests/svc.yaml
+                  repoName: python_webapp_artifact_pipeline
+                  branch: main
+              valuesPaths:
+                - k8s_manifests/values.yaml
+              skipResourceVersioning: false
+              enableDeclarativeRollback: false
+    type: Kubernetes
