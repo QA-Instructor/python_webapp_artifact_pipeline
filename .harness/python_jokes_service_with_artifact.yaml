@@ -16,7 +16,7 @@ service:
                   paths:
                     - k8s_manifests/deployment.yaml
                     - k8s_manifests/svc.yaml
-                  repoName: python-webapp-harness-pipeline
+                  repoName: python_webapp_artifact_pipeline
                   branch: main
               valuesPaths:
                 - k8s_manifests/values.yaml
