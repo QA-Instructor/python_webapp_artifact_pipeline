@@ -1,0 +1,20 @@
+inputSet:
+  name: deploy with trigger input set
+  identifier: deploy_with_trigger_input_set
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: python_test_pipeline
+    stages:
+      - stage:
+          identifier: deploy_to_local_k3d
+          type: Deployment
+          spec:
+            service:
+              serviceInputs:
+                serviceDefinition:
+                  type: Kubernetes
+                  spec:
+                    artifacts:
+                      primary:
+                        primaryArtifactRef: my_jokes_app
