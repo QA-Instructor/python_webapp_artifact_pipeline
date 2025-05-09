@@ -1,3 +1,4 @@
 replicas: 2  
   
-image: <+artifacts.image>  
+image: <+artifact.image>  
+tag: <+artifact.tag>
