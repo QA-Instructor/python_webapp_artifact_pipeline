@@ -27,9 +27,9 @@ service:
           primaryArtifactRef: <+input>
           sources:
             - spec:
-                connectorRef: account.harnessImage
+                connectorRef: dockerhub_connector
                 imagePath: victorialloyd/python-webapp
-                tag: "1"
+                tag: <+input>
                 digest: ""
               identifier: python_jokes_webapp
               type: DockerRegistry
